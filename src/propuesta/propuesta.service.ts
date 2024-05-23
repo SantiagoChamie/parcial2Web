@@ -11,7 +11,7 @@ export class PropuestaService {
         private readonly propuestaRepository: Repository<PropuestaEntity>
     ){}
     async findAllPropuesta(): Promise<PropuestaEntity[]> {
-        return await this.propuestaRepository.find({ relations: ["creador", "discusion"] });
+        return await this.propuestaRepository.find({ relations: ["proyecto", "profesor"] });
     }
     async findPropuestaById(id: number): Promise<PropuestaEntity> {
         const propuesta: PropuestaEntity = await this.propuestaRepository.findOne({where: {id}, relations: ["creador", "discusion"] } );
