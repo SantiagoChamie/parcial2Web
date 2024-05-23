@@ -14,7 +14,7 @@ export class ProfesorEntity {
     nombre: string;
 
     @Column()
-    grupoDeInvestigacon: string;
+    grupoDeInvestigacion: string;
 
     @Column()
     numeroDeExtension: number;
